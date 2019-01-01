@@ -243,8 +243,18 @@ If you have flashed the blinking LED example, D1 on ANAVI Light Controller with 
 
 # CHAPTER 4: Home Assistant
 
+Put into contiguration.yaml (replace a221b204e06b690772884e78d31691e with your hw id):
 
----
+```
+light:
+  - platform: mqtt
+    schema: json
+    name: "anavi_lightt_controller"
+    state_topic: "stat/a221b204e06b690772884e78d31691e/color"
+    command_topic: "cmnd/a221b204e06b690772884e78d31691e/color"
+    brightness: true
+    rgb: true
+```
 
 # CHAPTER 5: Schematics
 
